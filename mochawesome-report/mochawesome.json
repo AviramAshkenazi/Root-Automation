@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-11-27T08:07:13.230Z",
+    "end": "2018-11-27T08:07:17.853Z",
+    "duration": 4623,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "9bda0817-59ad-4906-a034-4be558ca626f",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "ccda7d09-51fe-4d39-8c82-dfca2f6c4eaf",
+        "title": "Window",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "cy.window() - get the global window object",
+            "fullTitle": "Window cy.window() - get the global window object",
+            "duration": 979,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "// https://on.cypress.io/window\ncy.window().should('have.property', 'top');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "fe511042-b58d-4b84-b839-2d2b608327da",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "cy.document() - get the document object",
+            "fullTitle": "Window cy.document() - get the document object",
+            "duration": 624,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "// https://on.cypress.io/document\ncy.document().should('have.property', 'charset').and('eq', 'UTF-8');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2ac11313-aacf-4c97-97f8-8b45b9245b7a",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "cy.title() - get the title",
+            "fullTitle": "Window cy.title() - get the title",
+            "duration": 825,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "// https://on.cypress.io/title\ncy.title().should('include', 'Kitchen Sink');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ec0e2e05-3e1a-44f5-9dbc-69cae9cbae0c",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "fe511042-b58d-4b84-b839-2d2b608327da",
+          "2ac11313-aacf-4c97-97f8-8b45b9245b7a",
+          "ec0e2e05-3e1a-44f5-9dbc-69cae9cbae0c"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 2428,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}

@@ -1,0 +1,6 @@
+{
+    "baseUrl":"http://168.63.38.236:3000",
+    "viewportWidth": 1500,
+    "viewportHeight": 1000,
+    "reporter": "mochawesome"
+}
