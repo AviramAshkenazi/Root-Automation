@@ -8,4 +8,6 @@ function LoginPage(){
     cy.get(':nth-child(3) > .form-control').type("password")
 
     cy.get('button.btn').click()
+
+    /*cy.get('.modal-footer > .btn').click()*/
 }
