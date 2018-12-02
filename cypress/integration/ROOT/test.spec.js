@@ -1,5 +1,7 @@
 const methodsLoginPage = require('../../../Page/LoginPage.js')
 const methodsleftBar = require('../../../Page/leftBar.js')
+const methodsRightBar = require('../../../Page/rightBar.js')
+
 const email = "QA@email.com";
 const password = "password";
 
@@ -48,5 +50,36 @@ describe("Actoin on left Bar",()=>{
     it("Click on tasks",()=>{
         methodsleftBar.taskesAction();
     })
-    
+})
+describe("Plus buttom",()=>{
+    beforeEach(()=>{
+        methodsRightBar.plusButton();
+    })
+    it("Create new task",()=>{
+        methodsRightBar.createTask();
+        cy.wait(8000)
+    })
+    it("Create new project",()=>{
+        methodsRightBar.createProject();
+    })
+    it("Create new discussion",()=>{
+        methodsRightBar.createProject();
+    })
+    it("Create new document",()=>{
+        methodsRightBar.createProject();
+    })
+})
+describe ("Profile buttom",()=>{
+    beforeEach(()=>{
+        methodsRightBar.profileButton();
+    })
+    it("Open profile page",()=>{
+        methodsRightBar.profilePage();
+    })
+    it("Close the page",()=>{
+        methodsRightBar.closeProfilePage();
+    })
+    it("Create webhook",()=>{
+        methodsRightBar.createWebhook();
+    })
 })
