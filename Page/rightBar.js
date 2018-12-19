@@ -7,8 +7,8 @@ module.exports =
   createProject,
   createDiscussion,
   createDocument,
-  profilePage,
   closeProfilePage,
+  profilePage,
   profileButton,
   createWebhook,
   Logout,
@@ -36,17 +36,14 @@ function createDocument(){
 }
 
 function profileButton(){
-    cy.get('.dropdown-toggle > .avatar').click()
+    cy.get('.dropdown-toggle > .avatar').click({force:true})
 }
 
 function profilePage(){
     cy.get('.user-menu > .dropdown-menu > :nth-child(1) > .ng-binding').click()
 }
 
-function closeProfilePage(){
-    methodsProfilePage.close().click({force: true});
-}
-
+//No nedded 
 function createWebhook(){
     cy.get('.user-menu > .dropdown-menu > :nth-child(2) > .ng-binding').click()
 }
@@ -57,4 +54,8 @@ function Logout(){
 
 function Inbox(){
     cy.get('.user-menu > .dropdown-menu > :nth-child(4) > .ng-binding').click()
+}
+
+function closeProfilePage(){
+    methodsProfilePage.closeProfilePage();
 }

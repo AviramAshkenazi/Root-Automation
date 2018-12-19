@@ -32,7 +32,8 @@ describe("Actoin on left Bar",()=>{
     })
     it("Click on search tag",()=>{
         methodsLoginPage.LoginPage();
-        cy.get('.modal-footer > .btn').click()
+        cy.wait(5000)
+        cy.get('.modal-footer > .btn').click({force:true})
         methodsleftBar.searchAction();
     })   
     it("Click on project tag",()=>{
@@ -79,7 +80,8 @@ describe ("Profile buttom",()=>{
     it("Close the page",()=>{
         methodsRightBar.closeProfilePage();
     })
-    it("Create webhook",()=>{
+    // No needed
+    /*it("Create webhook",()=>{
         methodsRightBar.createWebhook();
-    })
+    })*/
 })

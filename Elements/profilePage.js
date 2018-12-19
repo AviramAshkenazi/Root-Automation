@@ -2,7 +2,7 @@ module.exports =
 {
     notifications,
     general,
-    close,
+    closeProfilePage,
     name,
     emailAddress,
     chanagePassword,
@@ -20,8 +20,8 @@ function general(){
     cy.get('.tabs > ul > :nth-child(1) > .ng-binding')
 }
 
-function close(){
-    cy.get('.closeBtn')
+function closeProfilePage(){
+    cy.get('.closeBtn').click();
 }
 
 function name(){
