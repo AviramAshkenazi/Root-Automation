@@ -1,6 +1,8 @@
 {
-    "baseUrl":"http://168.61.92.223:3000",
+    "baseUrl":"http://40.113.78.224:3000",
+    "pageLoadTimeout":120000,
     "viewportWidth": 1500,
     "viewportHeight": 1000,
-    "reporter": "mochawesome"
+    "reporter": "mochawesome",
+    "chromeWebSecurity":false
 }

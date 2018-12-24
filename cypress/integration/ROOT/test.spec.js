@@ -1,6 +1,8 @@
-const methodsLoginPage = require('../../../Page/LoginPage.js')
+const methodsLoginPage = require('../../../Page/loginPage.js')
 const methodsleftBar = require('../../../Page/leftBar.js')
 const methodsRightBar = require('../../../Page/rightBar.js')
+const methodsUserProfile = require('../../../Elements/userPorfile.js')
+
 
 const email = "QA@email.com";
 const password = "password";
@@ -18,70 +20,103 @@ function login(email,password){
     cy.get('button.btn').click()
 }
 
-describe("Login User",()=>{
-    it("Go to root site",()=>{
-        cy.visit('/');
-    })
-    
-})
-describe("Actoin on left Bar",()=>{
-    before(()=>{
-        it("login",()=>{
-            login();     
-        })
-    })
-    it("Click on search tag",()=>{
-        methodsLoginPage.LoginPage();
-        cy.wait(5000)
-        cy.get('.modal-footer > .btn').click({force:true})
-        methodsleftBar.searchAction();
-    })   
-    it("Click on project tag",()=>{
-        methodsleftBar.projectsAction();
-    })
-    it("Click on meetings",()=>{
-        methodsleftBar.mettingsAction();
-    })
-    it("Click on documents",()=>{
-        methodsleftBar.documentsAction();
-    })
-    it("Click on settings",()=>{
-        methodsleftBar.settingsAction();
-    })
-    it("Click on tasks",()=>{
-        methodsleftBar.taskesAction();
-    })
-})
-describe("Plus buttom",()=>{
-    beforeEach(()=>{
+describe("Plus Button",()=>{
+
+    beforeEach( ()=> {  
+          cy.visit('/');
+          methodsLoginPage.LoginPage();
+          cy.wait(5000)
+      });
+      it("Create Task With Plus Button",()=>{
         methodsRightBar.plusButton();
-    })
-    it("Create new task",()=>{
         methodsRightBar.createTask();
-        cy.wait(8000)
-    })
-    it("Create new project",()=>{
+        cy.pause();
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+      });
+      it("Create project With Plus Button",()=>{
+        methodsRightBar.plusButton();
         methodsRightBar.createProject();
-    })
-    it("Create new discussion",()=>{
-        methodsRightBar.createProject();
-    })
-    it("Create new document",()=>{
-        methodsRightBar.createProject();
-    })
-})
-describe ("Profile buttom",()=>{
-    beforeEach(()=>{
-        methodsRightBar.profileButton();
-    })
-    it("Open profile page",()=>{
-        methodsRightBar.profilePage();
-    })
-    it("Close the page",()=>{
-        methodsRightBar.closeProfilePage();
-    })
-    // No needed
-    /*it("Create webhook",()=>{
-        methodsRightBar.createWebhook();
-    })*/
-})
+        cy.pause();
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+      });
+      it("Create discussion With Plus Button",()=>{
+        methodsRightBar.plusButton();
+        methodsRightBar.createDiscussion();
+        cy.pause();
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+      });
+      it("Create document With Plus Button",()=>{
+        methodsRightBar.plusButton();
+        methodsRightBar.createDocument();
+        cy.pause();
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+      });
+});
+
+
+// describe("Login User",()=>{
+//     it("Go to root site",()=>{
+//         cy.visit('/');
+//     })
+    
+// })
+// describe("Actoin on left Bar",()=>{
+//     before(()=>{
+//         it("login",()=>{
+//             // login();     
+//         })
+//     })
+    // it("Click on search tag",()=>{
+        // methodsLoginPage.LoginPage();
+        
+        // cy.get('.modal-footer > .btn').should('be.visible').click();
+        // methodsleftBar.searchAction();
+    // })   
+    // it("Click on project tag",()=>{
+    //     methodsleftBar.projectsAction();
+    // })
+    // it("Click on meetings",()=>{
+    //     methodsleftBar.mettingsAction();
+    // })
+    // it("Click on documents",()=>{
+    //     methodsleftBar.documentsAction();
+    // })
+    // it("Click on settings",()=>{
+    //     methodsleftBar.settingsAction();
+    // })
+    // it("Click on tasks",()=>{
+    //     methodsleftBar.taskesAction();
+    // })
+// })
+// describe("Plus buttom",()=>{
+    // beforeEach(()=>{
+        // methodsRightBar.plusButton();
+    // })
+    // it("Create new task",()=>{
+        // methodsRightBar.createTask();
+    // })
+    // it("Create new project",()=>{
+    //     methodsRightBar.createProject();
+    // })
+    // it("Create new discussion",()=>{
+    //     methodsRightBar.createProject();
+    // })
+    //  it("Create new document",()=>{
+    //     methodsRightBar.createProject();
+    //  })
+//  })
+// describe ("Profile page",()=>{
+//     beforeEach(()=>{
+//         methodsRightBar.profileButton();
+//     })
+//     it("Open profile page",()=>{
+//         methodsRightBar.profilePage();
+//     })
+//     it("Close the page",()=>{
+//         methodsRightBar.closeProfilePage();
+//     })
+//     it("Rename user",()=>{
+//         methodsRightBar.profilePage();
+//         methodsUserProfile.getUserProfile(cy).general.fullName.type("Juda the king")
+//     })
+// })
