@@ -1,25 +1,25 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 3,
-    "passes": 3,
+    "suites": 2,
+    "tests": 8,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2018-11-27T08:07:13.230Z",
-    "end": "2018-11-27T08:07:17.853Z",
-    "duration": 4623,
-    "testsRegistered": 3,
-    "passPercent": 100,
+    "failures": 6,
+    "start": "2019-01-01T11:39:26.503Z",
+    "end": "2019-01-01T11:45:49.176Z",
+    "duration": 382673,
+    "testsRegistered": 8,
+    "passPercent": 25,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "passPercentClass": "success",
+    "passPercentClass": "danger",
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "9bda0817-59ad-4906-a034-4be558ca626f",
+    "uuid": "301a07bb-ae6f-46f3-8d22-b9638ad55116",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,72 +28,190 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "ccda7d09-51fe-4d39-8c82-dfca2f6c4eaf",
-        "title": "Window",
+        "uuid": "d8ef7cbf-fb47-4273-bd4b-83c8ec68856e",
+        "title": "Plus Button",
         "fullFile": "",
         "file": "",
         "beforeHooks": [],
         "afterHooks": [],
         "tests": [
           {
-            "title": "cy.window() - get the global window object",
-            "fullTitle": "Window cy.window() - get the global window object",
-            "duration": 979,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
+            "title": "Create Task With Plus Button",
+            "fullTitle": "Plus Button Create Task With Plus Button",
+            "duration": 48987,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
             "pending": false,
-            "code": "// https://on.cypress.io/window\ncy.window().should('have.property', 'top');",
-            "err": {},
+            "code": "methodsRightBar.plusButton();\nmethodsRightBar.createTask(); //cy.pause();\nconsole.log(cy.get('.containerVertical').find('tr').should('have.length', 2));",
+            "err": {
+              "message": "CypressError: Timed out retrying: Not enough elements found. Found '0', expected '2'.",
+              "estack": "CypressError: Timed out retrying: Not enough elements found. Found '0', expected '2'.\n    at Object.cypressErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63726:11)\n    at Object.throwErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63691:18)\n    at Object.throwErrByPath (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63718:17)\n    at retry (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:57329:16)\n    at http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:49439:18\n    at tryCatcher (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:124969:23)\n    at Promise._settlePromiseFromHandler (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:122987:31)\n    at Promise._settlePromise (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123044:18)\n    at Promise._settlePromise0 (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123089:10)\n    at Promise._settlePromises (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123164:18)\n    at Async._drainQueue (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119893:16)\n    at Async._drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119903:10)\n    at Async.drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119777:14)\n    at <anonymous>"
+            },
             "isRoot": false,
-            "uuid": "fe511042-b58d-4b84-b839-2d2b608327da",
+            "uuid": "ba820a80-954d-496b-8dad-ef41365dbb09",
             "isHook": false,
             "skipped": false
           },
           {
-            "title": "cy.document() - get the document object",
-            "fullTitle": "Window cy.document() - get the document object",
-            "duration": 624,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
+            "title": "Create project With Plus Button",
+            "fullTitle": "Plus Button Create project With Plus Button",
+            "duration": 46895,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
             "pending": false,
-            "code": "// https://on.cypress.io/document\ncy.document().should('have.property', 'charset').and('eq', 'UTF-8');",
-            "err": {},
+            "code": "methodsRightBar.plusButton();\nmethodsRightBar.createProject(); //cy.pause();\nconsole.log(cy.get('.containerVertical').find('tr').should('have.length', 2));",
+            "err": {
+              "message": "CypressError: Timed out retrying: Not enough elements found. Found '0', expected '2'.",
+              "estack": "CypressError: Timed out retrying: Not enough elements found. Found '0', expected '2'.\n    at Object.cypressErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63726:11)\n    at Object.throwErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63691:18)\n    at Object.throwErrByPath (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63718:17)\n    at retry (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:57329:16)\n    at http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:49439:18\n    at tryCatcher (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:124969:23)\n    at Promise._settlePromiseFromHandler (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:122987:31)\n    at Promise._settlePromise (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123044:18)\n    at Promise._settlePromise0 (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123089:10)\n    at Promise._settlePromises (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123164:18)\n    at Async._drainQueue (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119893:16)\n    at Async._drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119903:10)\n    at Async.drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119777:14)\n    at <anonymous>"
+            },
             "isRoot": false,
-            "uuid": "2ac11313-aacf-4c97-97f8-8b45b9245b7a",
+            "uuid": "ff3b8f44-14da-4faf-9325-b40a0f0673f6",
             "isHook": false,
             "skipped": false
           },
           {
-            "title": "cy.title() - get the title",
-            "fullTitle": "Window cy.title() - get the title",
-            "duration": 825,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
+            "title": "Create discussion With Plus Button",
+            "fullTitle": "Plus Button Create discussion With Plus Button",
+            "duration": 46970,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
             "pending": false,
-            "code": "// https://on.cypress.io/title\ncy.title().should('include', 'Kitchen Sink');",
-            "err": {},
+            "code": "methodsRightBar.plusButton();\nmethodsRightBar.createDiscussion(); //cy.pause();\nconsole.log(cy.get('.containerVertical').find('tr').should('have.length', 2));",
+            "err": {
+              "message": "CypressError: Timed out retrying: Not enough elements found. Found '0', expected '2'.",
+              "estack": "CypressError: Timed out retrying: Not enough elements found. Found '0', expected '2'.\n    at Object.cypressErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63726:11)\n    at Object.throwErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63691:18)\n    at Object.throwErrByPath (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63718:17)\n    at retry (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:57329:16)\n    at http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:49439:18\n    at tryCatcher (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:124969:23)\n    at Promise._settlePromiseFromHandler (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:122987:31)\n    at Promise._settlePromise (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123044:18)\n    at Promise._settlePromise0 (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123089:10)\n    at Promise._settlePromises (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123164:18)\n    at Async._drainQueue (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119893:16)\n    at Async._drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119903:10)\n    at Async.drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119777:14)\n    at <anonymous>"
+            },
             "isRoot": false,
-            "uuid": "ec0e2e05-3e1a-44f5-9dbc-69cae9cbae0c",
+            "uuid": "393a2153-0eae-42e6-9e4d-30b12e23e9c0",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Create document With Plus Button",
+            "fullTitle": "Plus Button Create document With Plus Button",
+            "duration": 52446,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "methodsRightBar.plusButton();\nmethodsRightBar.createDocument(); //cy.pause();\nconsole.log(cy.get('.containerVertical').find('tr').should('have.length', 2));",
+            "err": {
+              "message": "CypressError: Timed out retrying: Not enough elements found. Found '1', expected '2'.",
+              "estack": "CypressError: Timed out retrying: Not enough elements found. Found '1', expected '2'.\n    at Object.cypressErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63726:11)\n    at Object.throwErr (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63691:18)\n    at Object.throwErrByPath (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:63718:17)\n    at retry (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:57329:16)\n    at http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:49439:18\n    at tryCatcher (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:124969:23)\n    at Promise._settlePromiseFromHandler (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:122987:31)\n    at Promise._settlePromise (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123044:18)\n    at Promise._settlePromise0 (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123089:10)\n    at Promise._settlePromises (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:123164:18)\n    at Async._drainQueue (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119893:16)\n    at Async._drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119903:10)\n    at Async.drainQueues (http://137.135.130.152:3000/__cypress/runner/cypress_runner.js:119777:14)\n    at <anonymous>"
+            },
+            "isRoot": false,
+            "uuid": "070d7729-37ef-423d-aca4-9f8b1c8fc032",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Rename the account",
+            "fullTitle": "Plus Button Rename the account",
+            "duration": 43068,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "methodsRightBar.profileButton();\nmethodsRightBar.profilePage();\nmethodsUserProfile.chanageAccountName();",
+            "err": {
+              "message": "TypeError: Cannot read property 'should' of undefined",
+              "estack": "TypeError: Cannot read property 'should' of undefined\n    at Object.chanageAccountName (http://137.135.130.152:3000/__cypress/tests?p=cypress\\integration\\ROOT\\test.spec.js-597:199:14)\n    at Context.<anonymous> (http://137.135.130.152:3000/__cypress/tests?p=cypress\\integration\\ROOT\\test.spec.js-597:392:24)"
+            },
+            "isRoot": false,
+            "uuid": "6d4cca22-1f04-4fe3-a588-b52849db1470",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Chanage the account email",
+            "fullTitle": "Plus Button Chanage the account email",
+            "duration": 45927,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "methodsRightBar.profileButton();\nmethodsRightBar.profilePage();\nmethodsUserProfile.chanageAccountEmailAddress();",
+            "err": {
+              "message": "TypeError: Cannot read property 'should' of undefined",
+              "estack": "TypeError: Cannot read property 'should' of undefined\n    at Object.chanageAccountEmailAddress (http://137.135.130.152:3000/__cypress/tests?p=cypress\\integration\\ROOT\\test.spec.js-597:210:10)\n    at Context.<anonymous> (http://137.135.130.152:3000/__cypress/tests?p=cypress\\integration\\ROOT\\test.spec.js-597:397:24)"
+            },
+            "isRoot": false,
+            "uuid": "b1abec5d-d1cb-4dbf-9745-fc2c34353902",
             "isHook": false,
             "skipped": false
           }
         ],
-        "suites": [],
-        "passes": [
-          "fe511042-b58d-4b84-b839-2d2b608327da",
-          "2ac11313-aacf-4c97-97f8-8b45b9245b7a",
-          "ec0e2e05-3e1a-44f5-9dbc-69cae9cbae0c"
+        "suites": [
+          {
+            "uuid": "03464aa1-a049-4bb1-a210-581fde3ae649",
+            "title": "Project tag",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "Click on project tag",
+                "fullTitle": "Plus Button Project tag Click on project tag",
+                "duration": 46891,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "methodsleftBar.projectsAction();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "7e41ed05-792b-4ed3-8c31-896b6f511f57",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "Open new project",
+                "fullTitle": "Plus Button Project tag Open new project",
+                "duration": 51077,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "",
+                "err": {},
+                "isRoot": false,
+                "uuid": "8ce26a6d-813b-44ea-a7cc-b8e2c2cdbcf9",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "7e41ed05-792b-4ed3-8c31-896b6f511f57",
+              "8ce26a6d-813b-44ea-a7cc-b8e2c2cdbcf9"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 97968,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
         ],
-        "failures": [],
+        "passes": [],
+        "failures": [
+          "ba820a80-954d-496b-8dad-ef41365dbb09",
+          "ff3b8f44-14da-4faf-9325-b40a0f0673f6",
+          "393a2153-0eae-42e6-9e4d-30b12e23e9c0",
+          "070d7729-37ef-423d-aca4-9f8b1c8fc032",
+          "6d4cca22-1f04-4fe3-a588-b52849db1470",
+          "b1abec5d-d1cb-4dbf-9745-fc2c34353902"
+        ],
         "pending": [],
         "skipped": [],
-        "duration": 2428,
+        "duration": 284293,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
@@ -108,5 +226,5 @@
     "rootEmpty": true,
     "_timeout": 2000
   },
-  "copyrightYear": 2018
+  "copyrightYear": 2019
 }
