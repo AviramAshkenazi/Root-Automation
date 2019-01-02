@@ -15,7 +15,6 @@ module.exports =
 
 /**
  *@description returns notifications from profile page
- *
  */
 function notifications(){
     cy.get('.tabs > ul > :nth-child(2) > .ng-binding')

@@ -9,7 +9,7 @@ module.exports =
 function LoginPage(){
     cy.visit('/');
     
-    cy.get(':nth-child(2) > .form-control').should('be.visible').type("QA@email.com")
+    cy.get(':nth-child(2) > .form-control').should('be.visible').type("QA1@email.com")
     cy.get(':nth-child(3) > .form-control').should('be.visible').type("password")
     
     cy.get('.btn').should('be.visible').click();

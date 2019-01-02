@@ -59,14 +59,14 @@ function createDocument(){
  * @description click on the profile butoom
  */
 function profileButton(){
-    cy.get('.dropdown-toggle > .avatar').should('be.visible').click({force:true})
+    cy.get('.dropdown-toggle > .avatar').click({force:true})
 }
 
 /**
  * @description click on the profile page
  */
 function profilePage(){
-    cy.get('.user-menu > .dropdown-menu > :nth-child(1) > .ng-binding').should('be.visible').click()
+    cy.get('.user-menu > .dropdown-menu > :nth-child(1) > .ng-binding').click()
 }
 
 //No nedded 

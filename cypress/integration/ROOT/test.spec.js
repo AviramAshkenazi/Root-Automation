@@ -1,7 +1,7 @@
 const methodsLoginPage = require('../../../Page/loginPage.js')
 const methodsleftBar = require('../../../Page/leftBar.js')
 const methodsRightBar = require('../../../Page/rightBar.js')
-const methodsUserProfile = require('../../../Elements/userPorfile.js')
+const methodsUserProfile = require('../../../Page/profilePage.js')
 
 
 const email = "QA@email.com";
@@ -30,26 +30,44 @@ describe("Plus Button",()=>{
       it("Create Task With Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createTask();
-        cy.pause();
-        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+        //cy.pause();
+        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
       });
       it("Create project With Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createProject();
-        cy.pause();
-        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+        //cy.pause();
+        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
       });
       it("Create discussion With Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createDiscussion();
-        cy.pause();
-        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+        //cy.pause();
+        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
       });
       it("Create document With Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createDocument();
-        cy.pause();
-        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
+        //cy.pause();
+        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
+      });
+      it("Rename the account",()=>{
+        methodsRightBar.profileButton();
+        methodsRightBar.profilePage();
+        methodsUserProfile.chanageAccountName();
+      });
+      it("Chanage the account email",()=>{
+        methodsRightBar.profileButton();
+        methodsRightBar.profilePage();
+        methodsUserProfile.chanageAccountEmailAddress();
+      });
+      describe("Project tag",()=>{
+        it("Click on project tag",()=>{
+            methodsleftBar.projectsAction();
+        });
+        it("Open new project",()=>{
+
+        });
       });
 });
 
