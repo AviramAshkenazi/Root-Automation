@@ -3,118 +3,11 @@ module.exports =
  
 };
 
-/**
- * @description open new project from "create new item" line
- */
-function openNewProject(){
-    cy.get('.create-new-item')
-}
-
 // new project page
-
-/**
- * @description set project as favorite
- */
-function setAsFavorite(){
-    cy.get('.detail-favorite')
-}
-
-/**
- * @description set assignee to the project
- */
-function selectAssignee(){
-    cy.get('[tooltip-template="Assignee"] > .ui-select-container > .ui-select-match > .btn-default')
-}
 
 // project date's
 
-/**
- * @description pick date to the project
- */
-function pickDate(){
-    cy.get('#dp1545740681010')
-}
 
-/**
- * @description set date as today dates
- */
-function pickTodayDate(){
-    cy.get('.ui-datepicker-days-cell-over > .ui-state-default')
-}
-
-//project's status
-/**
- * @description set project status
- */
-function pickStatus(){
-    cy.get('.detail-status')
-}
-
-/**
- * @description new status
- */
-function newStatus(){
-    cy.get('span.new')
-}
-
-/**
- * @description assign status
- */
-function assignStatus(){
-    cy.get('span.assigned')
-}
-
-/**
- * @description in progress status
- */
-function inProgressStatus(){
-    cy.get('span.in-progress')
-}
-
-/**
- * @description canceled status
- */
-function canceledStatus(){
-    cy.get('span.canceled')
-}
-
-/**
- * @description done status
- */
-function doneStatus(){
-    cy.get('span.done')
-}
-
-/**
- * @description archived status
- */
-function archivedStatus(){
-    cy.get('span.archived')
-}
-
-// color packer
-/**
- * @description set color for the projects
- */
-function colorPacker(){
-    cy.get('.detail-color')
-}
-
-// hi chat
-/**
- * @description click on hi chat
- */
-function hiChat(){
-    cy.get('#HI')
-}
-
-// more option
-/**
- * @description more option botoom
- */
-function moreOption(){
-    cy.get('.detail-menu > .dropdown-trigger')
-}
 
 /**
  * @description 
@@ -131,33 +24,7 @@ function publish(){
 }
 
 // project deatils 
-/**
- * @description set project name
- */
-function projectName(){
-    cy.get('.item-title').should('be.visible')
-}
 
-/**
- * @description enter project description
- */
-function projectDescription(){
-    cy.get('.detail-desc')
-}
-
-/**
- * @description add tages
- */
-function tagesButtom(){
-    cy.get('.detail-tags-add-btn > .tooltips > tip-cont > .ng-scope')
-}
-
-/**
- * @description set tages name
- */
-function tagesInput(){
-    cy.get('.detail-tags-input > .ui-select-container > .ui-select-search')
-}
 
 // sub projects
 /**

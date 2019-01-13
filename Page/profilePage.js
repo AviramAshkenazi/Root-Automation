@@ -13,6 +13,7 @@ function chanageAccountName(){
     chanageName.should('be.visible').clear();
     chanageName.should('be.visible').type("QA");
     methodsUserProfile.should('be.visible').closeProfilePage();
+    return ;
 }
 
 /**

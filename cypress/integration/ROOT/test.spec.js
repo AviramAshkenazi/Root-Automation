@@ -1,5 +1,5 @@
-const methodsLoginPage = require('../../../Page/loginPage.js')
-const methodsleftBar = require('../../../Page/leftBar.js')
+const methodsLoginPage = require('./Login/Page/loginPage.js')
+const methodsleftBar = require('./Left bar actions/Page/leftBar.js')
 const methodsRightBar = require('../../../Page/rightBar.js')
 const methodsUserProfile = require('../../../Page/profilePage.js')
 
@@ -31,25 +31,25 @@ describe("Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createTask();
         //cy.pause();
-        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
       });
       it("Create project With Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createProject();
         //cy.pause();
-        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
       });
       it("Create discussion With Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createDiscussion();
         //cy.pause();
-        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
       });
       it("Create document With Plus Button",()=>{
         methodsRightBar.plusButton();
         methodsRightBar.createDocument();
         //cy.pause();
-        console.log(cy.get('.containerVertical').find('td').should('have.length', 2))
+        console.log(cy.get('.containerVertical').find('tr').should('have.length', 2))
       });
       it("Rename the account",()=>{
         methodsRightBar.profileButton();
@@ -66,7 +66,7 @@ describe("Plus Button",()=>{
             methodsleftBar.projectsAction();
         });
         it("Open new project",()=>{
-
+          
         });
       });
 });
