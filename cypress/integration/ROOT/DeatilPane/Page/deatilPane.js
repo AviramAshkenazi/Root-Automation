@@ -1,4 +1,22 @@
 module.exports = {
+    setAsFavorite,
+    selectAssignee,
+    pickDate,
+    pickTodayDate,
+    pickStatus,
+    newStatus,
+    assignStatus,
+    canceledStatus,
+    inProgressStatus,
+    doneStatus,
+    archivedStatus,
+    colorPacker,
+    hiChat,
+    moreOption,
+    itemName,
+    itemDescription,
+    tagsButtom,
+    tagsInput
 
 }
 
@@ -120,15 +138,15 @@ function itemDescription(){
 }
 
 /**
- * @description add tages
+ * @description add tags
  */
-function tagesButtom(){
+function tagsButtom(){
     cy.get('.detail-tags-add-btn > .tooltips > tip-cont > .ng-scope')
 }
 
 /**
- * @description set tages name
+ * @description set tags name
  */
-function tagesInput(){
+function tagsInput(){
     cy.get('.detail-tags-input > .ui-select-container > .ui-select-search')
 }

@@ -1,6 +1,28 @@
 module.exports = 
 {
- 
+ policy,
+ publish,
+ subProject,
+ createNewSubProjects,
+ subProjectsName,
+ subProjectsAssigne,
+ subProjectsStatus,
+ subProjectsDate,
+ subProjectPage,
+ deleteSubProject,
+ projectsTemplate,
+ templateName,
+ visibleTemplate,
+ saveTemplate,
+ updateField,
+ attachment,
+ addUpdate,
+ activites,
+ files,
+ tasks,
+ manageTasks,
+ addMember,
+ newMemberInput
 };
 
 // new project page
